@@ -24,9 +24,7 @@ func main() {
 		switch direction {
 		case "forward":
 			position["horizontal"] += amount
-			if _, ok := position["aim"]; ok && position["aim"] != 0 {
-				position["depth"] += position["aim"]*amount
-			}
+			position["depth"] += position["aim"]*amount
 		case "down":
 			position["aim"] += amount
 		case "up":
